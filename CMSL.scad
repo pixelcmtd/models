@@ -20,7 +20,7 @@ module CMMultiLineText(lines = [], size = 10, font = "Liberation Mono",
 }
 
 module CMBox(width=50, height=37.5, wall=1,
-             fronttext=[], textsize=1.5, font="Liberation Mono") {
+             fronttext=[], textsize=1.5, font="Liberation Mono", textdepth=2) {
   inner = width - wall * 2;
   union() {
     difference() {
@@ -29,10 +29,10 @@ module CMBox(width=50, height=37.5, wall=1,
         cube([inner, inner, height+1]);
       }
     }
-    translate([wall, wall, height]) {
+    translate([wall, 0, height-wall]) {
       rotate([90, 0, 0]) {
-        linear_extrude(textsize) {
-          CMMultiLineText(fronttext, size=textsize, font=font);
+        linear_extrude(textdepth) {
+          CMMultiLineText(fronttext, size=textsize, vspace=textsize, font=font);
         }
       }
     }
