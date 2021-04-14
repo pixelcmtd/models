@@ -19,8 +19,8 @@ module CMMultiLineText(lines = [], size = 10, font = "Liberation Mono",
   }
 }
 
-module CMBox(width=50, height=37.5, wall=1,
-             fronttext=[], textsize=1.5, font="Liberation Mono", textdepth=2) {
+module CMBox(width=50, height=37.5, wall=1, fronttext=[],
+             textsize=1.5, font="Liberation Mono", textdepth=1.5) {
   inner = width - wall * 2;
   union() {
     difference() {
