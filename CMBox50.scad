@@ -9,4 +9,4 @@ boxtext = [
   "No such command.",
 ];
 
-CMBox(fronttext=boxtext, font="Liberation Mono");
+CMBox(width=50, height=37.5, wall=1, fronttext=boxtext, font="Liberation Mono");
