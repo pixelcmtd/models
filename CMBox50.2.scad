@@ -1,4 +1,4 @@
-use <CMSL.scad>
+use <lib/CMSL.scad>
 
 boxtext = [
   "CMBox 50.2",
