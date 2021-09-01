@@ -1,7 +1,6 @@
 SCAD = $(wildcard *.scad)
-STL  = $(SCAD:.scad=.stl)
 
-all: $(STL)
+all: $(SCAD:.scad=.stl)
 
 %.stl: %.scad
 	openscad $< -o $@
