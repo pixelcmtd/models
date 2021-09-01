@@ -1,9 +1,9 @@
 /*
 CMSL - The chrissx Media SCAD library
-Copyright 2021 chrissx Media, Chris Häußler
+Copyright 2021 chrissx Media, P. C. Häußler
 For licensing information please refer to the 2nd version of the
 GNU General Public License, as found in the repository you should have
-obtained this file from, at https://github.com/chrissxYT/models.
+obtained this file from, at https://github.com/pixelcmtd/models.
 */
 
 module CMMultiLineText(lines = [], size = 10, font = "Liberation Mono",
@@ -35,6 +35,15 @@ module CMBox(width=50, height=37.5, wall=1, fronttext=[],
           CMMultiLineText(fronttext, size=textsize, vspace=textsize, font=font);
         }
       }
+    }
+  }
+}
+
+module CMRing(inner, outer, height) {
+  linear_extrude(height) {
+    difference() {
+      circle(outer);
+      circle(inner);
     }
   }
 }
