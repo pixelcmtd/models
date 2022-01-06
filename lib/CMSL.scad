@@ -3,7 +3,7 @@ CMSL - The chrissx Media SCAD library
 Copyright 2021 chrissx Media, P. C. Häußler
 For licensing information please refer to the 2nd version of the
 GNU General Public License, as found in the repository you should have
-obtained this file from, at https://github.com/pixelcmtd/models.
+obtained this file from, at https://github.com/pixelcmtd/models/tree/master/LICENSE.
 */
 
 module CMMultiLineText(lines = [], size = 10, font = "Liberation Mono",
@@ -25,9 +25,8 @@ module CMBox(width=50, height=37.5, wall=1, fronttext=[],
   union() {
     difference() {
       cube([width, width, height]);
-      translate([wall, wall, wall]) {
+      translate([wall, wall, wall])
         cube([inner, inner, height+1]);
-      }
     }
     translate([wall, 0, height-wall]) {
       rotate([90, 0, 0]) {
@@ -45,5 +44,15 @@ module CMRing(inner, outer, height) {
       circle(outer);
       circle(inner);
     }
+  }
+}
+
+module CMGear(inner, outer, height, n, thickness, width) {
+  union() {
+    CMRing(inner, outer, height);
+    for(i = [0:n])
+      rotate([0,0,i*360/n])
+        translate([inner,0,0])
+        cube([outer-inner+thickness, width, height]);
   }
 }
