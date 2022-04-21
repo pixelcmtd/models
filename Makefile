@@ -7,6 +7,6 @@ all: $(STL)
 	openscad $< -o $@
 
 clean:
-	rm -f $(STL)
+	rm -f $(STL) *.gx
 
 .PHONY: all clean

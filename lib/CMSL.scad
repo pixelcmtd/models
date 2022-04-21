@@ -1,10 +1,10 @@
 /*
-CMSL - The chrissx Media SCAD library
-Copyright 2021 chrissx Media, P. C. Häußler
-For licensing information please refer to the 2nd version of the
-GNU General Public License, as found in the repository you should have
-obtained this file from, at https://github.com/pixelcmtd/models/tree/master/LICENSE.
-*/
+ * CMSL - The chrissx Media SCAD library
+ * Copyright 2021 chrissx Media, P. C. Häußler
+ * For licensing information please refer to the 2nd version of the
+ * GNU General Public License, as found in the repository you should have
+ * obtained this file from, at https://github.com/pixelcmtd/models/tree/master/LICENSE.
+ */
 
 module CMMultiLineText(lines = [], size = 10, font = "Liberation Mono",
                        halign = "left", valign = "baseline",
