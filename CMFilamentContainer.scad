@@ -1,3 +1,6 @@
+/// A little thing to hold your filament spools
+/// when they don't fit in your printer.
+
 difference() {
     union() {
         linear_extrude(4)

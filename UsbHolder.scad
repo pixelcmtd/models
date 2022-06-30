@@ -1,3 +1,6 @@
+/// A mounting bracket for everything you can think of,
+/// but mainly an Anker PowerPort.
+
 difference() {
   union() {
     translate([-5, 0, 0])

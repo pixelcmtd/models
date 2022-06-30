@@ -1,3 +1,5 @@
+/// A structure that allows you to mount a 200mm fan to a VESA mount.
+
 $fn = 100;
 
 union() {

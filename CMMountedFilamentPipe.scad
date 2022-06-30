@@ -1,3 +1,5 @@
+/// A pipe to pass your filament through.
+
 difference() {
     union() {
         cube([25, 80, 5]);
