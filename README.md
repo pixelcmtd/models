@@ -58,6 +58,12 @@ A cup that can fit a can of Monster or be used otherwise.
 
 <img width=200px height=200px src=MonsterCup.png />
 
+## [PCFoot](PCFoot.scad)
+
+feet for my pc, LEL
+
+<img width=200px height=200px src=PCFoot.png />
+
 ## [SimpleMonsterCooler](SimpleMonsterCooler.scad)
 
 
