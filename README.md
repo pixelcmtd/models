@@ -52,6 +52,13 @@ A structure that allows you to mount a 200mm fan to a VESA mount.
 
 <img width=200px height=200px src=FanMount.png />
 
+## [KeyboardFeet](KeyboardFeet.scad)
+
+Feet for my keyboard to stand on an HDMI switch and Composite converter in
+addition to my PS4.
+
+<img width=200px height=200px src=KeyboardFeet.png />
+
 ## [MonsterCup](MonsterCup.scad)
 
 A cup that can fit a can of Monster or be used otherwise.
