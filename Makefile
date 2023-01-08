@@ -1,10 +1,14 @@
 SCAD = $(wildcard *.scad)
 STL = $(SCAD:.scad=.stl)
+CSG = $(SCAD:.scad=.csg)
 PNG = $(SCAD:.scad=.png)
 
-all: $(STL) README.md
+all: $(STL) $(CSG) README.md
 
 %.stl: %.scad
+	openscad $< -o $@
+
+%.csg: %.scad
 	openscad $< -o $@
 
 %.png: %.scad

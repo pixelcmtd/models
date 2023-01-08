@@ -1,3 +1,6 @@
 .DS_Store
 *.stl
+*.csg
 *.gx
+*.stp
+*.step
