@@ -37,6 +37,7 @@ when they don't fit in your printer.
 ## [CMMountedFilamentPipe](CMMountedFilamentPipe.scad)
 
 A pipe to pass your filament through.
+Now very FlashForge Finder (v1) specific.
 
 <img width=200px height=200px src=CMMountedFilamentPipe.png />
 
