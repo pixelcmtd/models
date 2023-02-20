@@ -114,3 +114,9 @@ but mainly an Anker PowerPort.
 A very simple clamp that was used to attach a desk pad to a desk once.
 
 <img width=200px height=200px src=clamp.png />
+
+## [shitduct](shitduct.scad)
+
+a shitty duct to attach a hose to a window
+
+<img width=200px height=200px src=shitduct.png />
