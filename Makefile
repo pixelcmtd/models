@@ -5,14 +5,14 @@ PNG = $(SCAD:.scad=.png)
 
 all: $(STL) $(CSG) README.md
 
-%.stl: %.scad
+%.stl: %.csg
 	openscad $< -o $@
 
 %.csg: %.scad
 	openscad $< -o $@
 
-%.png: %.scad
-	openscad $< --render --imgsize 1024,1024 -o $@
+%.png: %.csg
+	openscad $< --render --imgsize 1024,1024 --colorscheme BeforeDawn -o $@
 
 clean:
 	rm -f $(PNG) $(STL) *.gx README.md
