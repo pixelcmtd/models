@@ -60,6 +60,13 @@ addition to my PS4.
 
 <img width=200px height=200px src=KeyboardFeet.png />
 
+## [MacBookCooler](MacBookCooler.scad)
+
+Successor to MacBookMount
+Externally water cools your MacBook (if you made it uncompliant)
+
+<img width=200px height=200px src=MacBookCooler.png />
+
 ## [MonsterCup](MonsterCup.scad)
 
 A cup that can fit a can of Monster or be used otherwise.
