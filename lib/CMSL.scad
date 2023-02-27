@@ -1,9 +1,9 @@
 /*
  * CMSL - The chrissx Media SCAD library
  * Copyright 2021-2023 chrissx Media, P. C. Häußler
- * For licensing information please refer to the 2nd version of the
- * GNU General Public License, as found in the repository you should have
- * obtained this file from, at https://github.com/pixelcmtd/models/tree/master/LICENSE.
+ * For licensing information please refer to the 2nd version of the GNU General
+ * Public License, as found in the repository you should have obtained this file
+ * from, at <https://github.com/pixelcmtd/models/tree/master/LICENSE>.
  */
 
 module CMMultiLineText(lines = [], size = 10, font = "Liberation Mono",
@@ -38,7 +38,7 @@ module CMBox(width=50, height=37.5, wall=1, fronttext=[],
   }
 }
 
-module CMRing(inner, outer, height) {
+module CMRing(inner=0.5, outer=1, height=1) {
   linear_extrude(height) {
     difference() {
       circle(outer);
@@ -47,7 +47,9 @@ module CMRing(inner, outer, height) {
   }
 }
 
-module CMGear(inner, outer, height, n, thickness, width) {
+/// only use this in applications where you are fine with it changing
+// TODO: make the teeth straight
+module CMGear(inner=0.5, outer=1, height=1, n=5, thickness=0.5, width=0.5) {
   union() {
     CMRing(inner, outer, height);
     for(i = [0:n])
