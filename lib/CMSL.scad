@@ -38,6 +38,33 @@ module CMBox(width=50, height=37.5, wall=1, fronttext=[],
   }
 }
 
+module CMRoundCube(size=1, r=0.25, 3d=true, center=false) {
+  size = is_num(size) ? [size, size, size] : size;
+  center = is_bool(center) ? [center, center, center] : center;
+  translate([center.x ? -size.x/2 : 0, center.y ? -size.y/2 : 0, center.z ? -size.z/2 : 0])
+    if(3d)
+      hull()
+        for(p = [[r, r, r],
+            [r, r, size.z - r],
+            [r, size.y - r, r],
+            [r, size.y - r, size.z - r],
+            [size.x - r, r, r],
+            [size.x - r, r, size.z - r],
+            [size.x - r, size.y - r, r],
+            [size.x - r, size.y - r, size.z - r]])
+          translate(p)
+              sphere(r=r);
+    else
+      linear_extrude(size.z)
+        hull()
+        for(p = [[r, r],
+            [r, size.y - r],
+            [size.x - r, r],
+            [size.x - r, size.y - r]])
+          translate(p)
+              circle(r=r);
+}
+
 module CMRing(inner=0.5, outer=1, height=1) {
   linear_extrude(height) {
     difference() {
