@@ -15,9 +15,9 @@ all: $(STL) $(CSG) README.md
 	openscad $< --render --imgsize 1024,1024 --colorscheme BeforeDawn -o $@
 
 clean:
-	rm -f $(PNG) $(STL) *.gx README.md
+	rm -f $(PNG) $(STL) $(CSG) *.gx README.md
 
-README.md: README.template.md $(PNG) $(SCAD) Makefile
+README.md: README.template.md $(SCAD) $(PNG) Makefile
 	for x in $(SCAD) ; do echo "\n## [`echo $$x | sed 's/\.scad$$//'`]($$x)\n\n`grep '^/// ' $$x`\n\n<img width=200px height=200px src=`echo $$x | sed 's/\.scad$$/.png/'` />" ; done | sed 's/^\/\/\/ //' | cat README.template.md - > README.md
 
 .PHONY: all clean
