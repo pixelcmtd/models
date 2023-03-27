@@ -1,6 +1,11 @@
-.DS_Store
 *.stl
 *.csg
+*.dxf
 *.gx
+*.gcode
+*.cnc
 *.stp
 *.step
+
+.DS_Store
+Thumbs.db
