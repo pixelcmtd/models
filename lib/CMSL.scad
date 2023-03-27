@@ -19,14 +19,16 @@ module CMMultiLineText(lines = [], size = 10, font = "Liberation Mono",
   }
 }
 
+/// NOTE: this api will be broken soon
 module CMBox(width=50, height=37.5, wall=1, fronttext=[],
     textsize=1.5, font="Liberation Mono", textdepth=1.5) {
-  inner = width - wall * 2;
+  width = is_num(width) ? [width, width] : width;
+  // TODO: inverted text if depth < 0
   union() {
     difference() {
-      cube([width, width, height]);
+      cube([width.x, width.y, height]);
       translate([wall, wall, wall])
-        cube([inner, inner, height+1]);
+        cube([width.x - wall * 2, width.y - wall * 2, height+1]);
     }
     translate([wall, 0, height-wall]) {
       rotate([90, 0, 0]) {
@@ -74,7 +76,8 @@ module CMRing(inner=0.5, outer=1, height=1) {
   }
 }
 
-/// only use this in applications where you are fine with it changing
+/// NOTE: only use this in applications where you are fine with it changing
+///       (the teeth aren't straight, which we might fix)
 // TODO: make the teeth straight
 module CMGear(inner=0.5, outer=1, height=1, n=5, thickness=0.5, width=0.5) {
   union() {
