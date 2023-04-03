@@ -19,18 +19,18 @@ module CMMultiLineText(lines = [], size = 10, font = "Liberation Mono",
   }
 }
 
-/// NOTE: this api will be broken soon
-module CMBox(width=50, height=37.5, wall=1, fronttext=[],
+/// NOTE: this api will be broken until it is good
+module CMBox(size=[50, 50, 37.5], wall=1, fronttext=[],
     textsize=1.5, font="Liberation Mono", textdepth=1.5) {
-  width = is_num(width) ? [width, width] : width;
+  size = is_num(size) ? [size, size, size] : size;
   // TODO: inverted text if depth < 0
   union() {
     difference() {
-      cube([width.x, width.y, height]);
+      cube([size.x, size.y, size.z]);
       translate([wall, wall, wall])
-        cube([width.x - wall * 2, width.y - wall * 2, height+1]);
+        cube([size.x - wall * 2, size.y - wall * 2, size.z+1]);
     }
-    translate([wall, 0, height-wall]) {
+    translate([wall, 0, size.z-wall]) {
       rotate([90, 0, 0]) {
         linear_extrude(textdepth) {
           CMMultiLineText(fronttext, size=textsize, vspace=textsize, font=font);
