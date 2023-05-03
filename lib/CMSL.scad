@@ -78,7 +78,7 @@ module CMRing(inner=0.5, outer=1, height=1) {
 }
 
 /// NOTE: only use this in applications where you are fine with it changing
-///       (the teeth aren't straight, which we might fix)
+///       (the teeth aren't straight, which we'll probably fix)
 // TODO: make the teeth straight
 module CMGear(inner=0.5, outer=1, height=1, n=5, thickness=0.5, width=0.5) {
   union() {
@@ -87,5 +87,25 @@ module CMGear(inner=0.5, outer=1, height=1, n=5, thickness=0.5, width=0.5) {
       rotate([0,0,i*360/n])
         translate([inner,0,0])
         cube([outer-inner+thickness, width, height]);
+  }
+}
+
+// TODO: angle halfes
+module CMAngleConnector(w=5, h1=10, h2=10, thickness=3, angle=90) {
+  union() {
+    translate([0, 0, -w])
+      linear_extrude(thickness)
+      difference() {
+        square([h1, w]);
+        translate([h1, w/2])
+          children();
+      }
+    rotate([0, angle, 0])
+      linear_extrude(thickness)
+      difference() {
+        square([h2, w]);
+        translate([h2, w/2])
+          children();
+      }
   }
 }
