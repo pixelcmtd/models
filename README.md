@@ -133,3 +133,11 @@ a microscope for your phone
 a shitty duct to attach a hose to a window
 
 <img width=200px height=200px src=shitduct.png />
+
+## [weldingstation](weldingstation.scad)
+
+A welding station consisting of four KYOCERA AVX SCCY68B407SSB capacitors
+in series and two 0AWG with M8 end...shoe...things
+This is probably the worst best way of welding.
+
+<img width=200px height=200px src=weldingstation.png />
