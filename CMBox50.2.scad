@@ -1,6 +1,6 @@
 /// A 50²x37.5 CMBox with a wall-thickness of 2.
 
-use <lib/CMSL.scad>;
+use <CMSL.scad>;
 
 boxtext = [
   "CMBox 50.2",
