@@ -126,3 +126,19 @@ module CMCountersunk(l=10, ds=4, dk, k) {
     cylinder(k, d1=dk, d2=ds);
   }
 }
+
+module CMInsert(l, d, o) {
+  translate([0, 0, o == undef ? -l : o])
+    cylinder(l, d=d);
+}
+module CMInsertM2(l=5.0, o) { CMInsert(l, 3.2, o); }
+/// also works for M2.5
+module CMInsertM3(l=6.7, o) { CMInsert(l, 4.0, o); }
+module CMInsertM3S(o) { CMInsertM3(l=4.0, o); }
+module CMInsertM4(l=9.1, o) { CMInsert(l, 5.6, o); }
+module CMInsertM4S(o) { CMInsertM4(l=4.0, o); }
+module CMInsertM5(l=10.5, o) { CMInsert(l, 6.4, o); }
+module CMInsertM5S(o) { CMInsertM5(l=5.8, o); }
+/// also works for ¼”
+module CMInsertM6(l=13.7, o) { CMInsert(l, 8.0, o); }
+module CMInsertM8(l=13.7, o) { CMInsert(l, 9.6, o); }
