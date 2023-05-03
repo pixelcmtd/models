@@ -109,3 +109,20 @@ module CMAngleConnector(w=5, h1=10, h2=10, thickness=3, angle=90) {
       }
   }
 }
+
+/// l:  total length
+/// ds: thread diameter
+/// dk: head diameter
+/// k:  head height
+///
+/// if dk and/or k isn't given, approximations based on ds and DIN 7997 are used
+/// NOTE: please don't use named parameters yet, the names might change
+// TODO: figure that out
+module CMCountersunk(l=10, ds=4, dk, k) {
+  dk = dk == undef ? ds * 2.25 : dk;
+  k = k == undef ? ds * 0.75 : k;
+  union() {
+    cylinder(l, d=ds);
+    cylinder(k, d1=dk, d2=ds);
+  }
+}
