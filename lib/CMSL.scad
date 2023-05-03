@@ -23,14 +23,15 @@ module CMMultiLineText(lines = [], size = 10, font = "Liberation Mono",
 module CMBox(size=[50, 50, 37.5], wall=1, fronttext=[],
     textsize=1.5, font="Liberation Mono", textdepth=1.5) {
   size = is_num(size) ? [size, size, size] : size;
+  wall = is_num(wall) ? [wall, wall, wall] : wall;
   // TODO: inverted text if depth < 0
   union() {
     difference() {
       cube([size.x, size.y, size.z]);
-      translate([wall, wall, wall])
-        cube([size.x - wall * 2, size.y - wall * 2, size.z+1]);
+      translate([wall.x, wall.y, wall.z])
+        cube([size.x - wall.x * 2, size.y - wall.y * 2, size.z+1]);
     }
-    translate([wall, 0, size.z-wall]) {
+    translate([wall.x, 0, size.z-wall.z]) {
       rotate([90, 0, 0]) {
         linear_extrude(textdepth) {
           CMMultiLineText(fronttext, size=textsize, vspace=textsize, font=font);
