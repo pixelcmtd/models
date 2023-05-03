@@ -45,7 +45,9 @@ module CMRoundCube(size=1, r=0.25, 3d=true, center=false) {
   size = is_num(size) ? [size, size, size] : size;
   center = is_bool(center) ? [center, center, center] : center;
   translate([center.x ? -size.x/2 : 0, center.y ? -size.y/2 : 0, center.z ? -size.z/2 : 0])
-    if(3d)
+    if(r == 0)
+      cube(size);
+    else if(3d)
       hull()
         for(p = [[r, r, r],
             [r, r, size.z - r],
