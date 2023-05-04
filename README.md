@@ -122,6 +122,13 @@ A very simple clamp that was used to attach a desk pad to a desk once.
 
 <img width=200px height=200px src=clamp.png />
 
+## [dc-power-strip](dc-power-strip.scad)
+
+A power strip consisting of three Neutrik powerCON TRUE1 (TOP) connectors
+and a (currently unused) switch.
+
+<img width=200px height=200px src=dc-power-strip.png />
+
 ## [microscope](microscope.scad)
 
 a microscope for your phone
