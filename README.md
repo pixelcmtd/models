@@ -141,6 +141,13 @@ a shitty duct to attach a hose to a window
 
 <img width=200px height=200px src=shitduct.png />
 
+## [solderingstation](solderingstation.scad)
+
+A way of mounting a soldering iron,
+assuming you have a metal bracket to hold it.
+
+<img width=200px height=200px src=solderingstation.png />
+
 ## [weldingstation](weldingstation.scad)
 
 A welding station consisting of four KYOCERA AVX SCCY68B407SSB capacitors
