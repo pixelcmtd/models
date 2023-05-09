@@ -3,13 +3,14 @@ STL = $(SCAD:.scad=.stl)
 CSG = $(SCAD:.scad=.csg)
 PNG = $(SCAD:.scad=.png)
 DXF = $(SCAD:.scad=.dxf)
+LIBS = $(wildcard lib/*.scad)
 
 all: $(CSG) $(STL) $(DXF) README.md
 
 %.stl: %.csg
 	OPENSCADPATH=lib openscad $< -o $@
 
-%.csg: %.scad
+%.csg: %.scad $(LIBS)
 	OPENSCADPATH=lib openscad $< -o $@
 
 %.png: %.csg
