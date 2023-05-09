@@ -74,31 +74,14 @@ union() {
   translate([0, 300, 0])
     union() {
       difference() {
-        linear_extrude(5)
-          union() {
-            //difference() {
-  // TODO: only make the itx part solid (CMFrame(?, r, h, w, 3d=false))
+        union() {
+          CMFrame(posts, r=5, h=5, w=10, 3d=false);
+          linear_extrude(5)
             hull()
-              for(p = concat([[141, 250], [298.5, 250]], posts))
-                translate(p)
-                  circle(r=5);
-            //for(x = [0:12:160])
-            //  for(y = [0:12:240])
-            //    translate([141+x, 8+y])
-            //      circle(d=9, $fn=6);
-            //for(x = [0+12/2:12:160])
-            //  for(y = [0+12/2:12:240])
-            //    translate([141+x, 8+y])
-            //      circle(d=9, $fn=6);
-            //}
-            //for(p = posts)
-            //  translate(p)
-            //    circle(d=10);
-            hull()
-              for(p = [[4.17+20.32*(7-n_p)-1, 248], [141, 248]])
-                translate(p)
-                  circle(r=7);
-          }
+            for(p = [[141, 250], [298.5, 250], [141, 78.7], [298.5, 78.7], [141, 233.7], [298.5, 210.8]])
+              translate(p)
+                circle(r=5);
+        }
 
         for(pos = posts)
           translate([pos.x, pos.y, 0])
@@ -108,17 +91,7 @@ union() {
             CMCountersunk(l=5, ds=3, dk=6, k=4);
       }
 
-      //for(pos = posts)
-      //  if(pos != [141, 233.7])
-      //    translate([pos.x, pos.y, 0])
-      //      cylinder(120, d=6);
-
-      //translate([20.32*(7-n_p), 246-6/2, 0])
-      //  CMRoundCube([20.32*n_p, 6, 125], r=6/2, 3d=false);
-
-      //translate([298.5-6/2, 78.7-5, 0])
-      //  CMRoundCube([6, 210.8-78.7+10, 125], r=6/2, 3d=false);
-
+      // TODO: detachable psu mount
       translate([291, 239, 0])
         rotate([90, 0, 180])
         difference() {
