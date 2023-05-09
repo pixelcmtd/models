@@ -158,6 +158,11 @@ assuming you have a metal bracket to hold it.
 
 A PC test bench that supports ATX, Micro-ATX, DTX, Mini-ITX and probably many more.
 
+Extra parts needed:
+- M3 Inserts (l < 7.5)
+- M3 Spacers (l ≥ 90)
+- M3 Countersunk Screws (8 < l < 12 should be a good idea, depending on your spacers)
+
 <img width=200px height=200px src=testbench.png />
 
 ## [weldingstation](weldingstation.scad)

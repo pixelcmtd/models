@@ -1,4 +1,9 @@
 /// A PC test bench that supports ATX, Micro-ATX, DTX, Mini-ITX and probably many more.
+///
+/// Extra parts needed:
+/// - M3 Inserts (l < 7.5)
+/// - M3 Spacers (l ≥ 90)
+/// - M3 Countersunk Screws (8 < l < 12 should be a good idea, depending on your spacers)
 use <CMSL.scad>;
 $fn = 10;
 
@@ -95,22 +100,12 @@ union() {
       translate([291, 239, 0])
         rotate([90, 0, 180])
         difference() {
-          union() {
-            translate([6-10/2, 0, 0])
-              CMRoundCube([10, 80+10, 5], r=5, 3d=false);
-            translate([120-10/2, 0, 0])
-              CMRoundCube([10, 6+10, 5], r=5, 3d=false);
-            translate([144-10/2, 0, 0])
-              CMRoundCube([10, 80+10, 5], r=5, 3d=false);
-          }
-          translate([6, 16+5, 0])
-            cylinder(5, d=5);
-          translate([6, 80+5, 0])
-            cylinder(5, d=5);
-          translate([120, 6+5, 0])
-            cylinder(5, d=5);
-          translate([144, 80+5, 0])
-            cylinder(5, d=5);
+          for(p = [[6, 80], [120, 6], [144, 80]])
+            translate([p.x-7/2, 0, 0])
+              CMRoundCube([7, p.y+7, 4], r=7/2, 3d=false);
+          for(p = [[6, 16], [6, 80], [120, 6], [144, 80]])
+            translate([p.x, p.y+7/2, 0])
+              cylinder(4, d=4);
         }
     }
 }
