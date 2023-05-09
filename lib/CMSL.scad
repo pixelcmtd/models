@@ -92,7 +92,7 @@ module CMGear(inner=0.5, outer=1, height=1, n=5, thickness=0.5, width=0.5) {
   }
 }
 
-// TODO: angle halfes
+// TODO: angle halfes (or i think we can use children indexes)
 module CMAngleConnector(w=5, h1=10, h2=10, thickness=3, angle=90) {
   union() {
     translate([0, 0, -w])
@@ -144,3 +144,16 @@ module CMInsertM5S(o) { CMInsertM5(l=5.8, o); }
 /// also works for ¼”
 module CMInsertM6(l=13.7, o) { CMInsert(l, 8.0, o); }
 module CMInsertM8(l=13.7, o) { CMInsert(l, 9.6, o); }
+
+/// this is very early, usually wouldn't have gotten in and is subject to change
+// there are probably way better algorithms, TODO: find them
+module CMFrame(points, r, h, w, 3d) {
+  for(p1 = points)
+    for(p2 = points)
+      if(p1.x == p2.x && p1.y < p2.y)
+        translate([p1.x-w/2, p1.y-w/2, 0])
+          CMRoundCube([w, p2.y-p1.y+w, h], r=r, 3d=3d);
+      else if(p1.y == p2.y && p1.x < p2.x)
+        translate([p1.x-w/2, p1.y-w/2, 0])
+          CMRoundCube([p2.x-p1.x+w, w, h], r=r, 3d=3d);
+}
