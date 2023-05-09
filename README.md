@@ -135,6 +135,12 @@ a microscope for your phone
 
 <img width=200px height=200px src=microscope.png />
 
+## [oldintelbackplate](oldintelbackplate.scad)
+
+a backplate for older intel sockets (75²)
+
+<img width=200px height=200px src=oldintelbackplate.png />
+
 ## [shitduct](shitduct.scad)
 
 a shitty duct to attach a hose to a window
