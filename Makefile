@@ -25,6 +25,6 @@ clean:
 	rm -f $(STL) $(CSG) $(PNG) *.gx *.gcode *.cnc README.md
 
 README.md: README.template.md $(SCAD) $(PNG) Makefile
-	for x in $(SCAD) ; do echo "\n## [`echo $$x | sed 's/\.scad$$//'`]($$x)\n\n`grep '^/// ' $$x`\n\n<img width=200px height=200px src=`echo $$x | sed 's/\.scad$$/.png/'` />" ; done | sed 's/^\/\/\/ //' | cat README.template.md - > README.md
+	for x in $(SCAD) ; do echo "\n## [`echo $$x | sed 's/\.scad$$//'`]($$x)\n\n`grep '^///' $$x`\n\n<img width=200px height=200px src=`echo $$x | sed 's/\.scad$$/.png/'` />" ; done | sed -E 's/^\/\/\/ ?//' | cat README.template.md - > README.md
 
 .PHONY: all clean
