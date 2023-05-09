@@ -154,6 +154,12 @@ assuming you have a metal bracket to hold it.
 
 <img width=200px height=200px src=solderingstation.png />
 
+## [testbench](testbench.scad)
+
+A PC test bench that supports ATX, Micro-ATX, DTX, Mini-ITX and probably many more.
+
+<img width=200px height=200px src=testbench.png />
+
 ## [weldingstation](weldingstation.scad)
 
 A welding station consisting of four KYOCERA AVX SCCY68B407SSB capacitors
