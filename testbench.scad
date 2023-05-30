@@ -87,6 +87,11 @@ union() {
             for(p = [[141, 250], [298.5, 250], [141, 78.7], [298.5, 78.7], [141, 233.7], [298.5, 210.8]])
               translate(p)
                 circle(r=5);
+          linear_extrude(4)
+            hull()
+            for(p = [[4.17+20.32*(7-n_p)-1, 248], [141, 248]])
+              translate(p)
+                circle(r=5);
         }
 
         for(pos = posts)
