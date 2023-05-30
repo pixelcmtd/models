@@ -103,14 +103,16 @@ union() {
       }
 
       // TODO: detachable psu mount
-      translate([291, 239, 0])
+      translate([(141+298.5)/2, 239, 0])
         rotate([90, 0, 180])
         difference() {
-          for(p = [[6, 80], [120, 6], [144, 80]])
-            translate([p.x-7/2, 0, 0])
-              CMRoundCube([7, p.y+7, 4], r=7/2, 3d=false);
-          for(p = [[6, 16], [6, 80], [120, 6], [144, 80]])
-            translate([p.x, p.y+7/2, 0])
+          w = 7;
+          // TODO: sfx, ... support
+          for(p = [[-69, 80], [45, 6], [69, 80]])
+            translate([p.x-w/2, 0, 0])
+              CMRoundCube([w, p.y+4+w/2, 4], r=w/2, 3d=false);
+          for(p = [[-69, 16], [-69, 80], [45, 6], [69, 80]])
+            translate([p.x, p.y+4, 0])
               cylinder(4, d=4);
         }
     }
