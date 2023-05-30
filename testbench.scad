@@ -4,6 +4,7 @@
 /// - M3 Inserts (l < 7.5)
 /// - M3 Spacers (l ≥ 90)
 /// - M3 Countersunk Screws (8 < l < 12 should be a good idea, depending on your spacers)
+/// - M3 Screws (l ≤ 10, depending on your mainboard and pcie slot thicknesses)
 use <CMSL.scad>;
 $fn = 10;
 
@@ -80,8 +81,8 @@ union() {
     union() {
       difference() {
         union() {
-          CMFrame(posts, r=5, h=5, w=10, 3d=false);
-          linear_extrude(5)
+          CMFrame(posts, r=5, h=4, w=10, 3d=false);
+          linear_extrude(4)
             hull()
             for(p = [[141, 250], [298.5, 250], [141, 78.7], [298.5, 78.7], [141, 233.7], [298.5, 210.8]])
               translate(p)
@@ -90,10 +91,10 @@ union() {
 
         for(pos = posts)
           translate([pos.x, pos.y, 0])
-            CMCountersunk(l=5, ds=3, dk=6, k=4);
+            CMCountersunk(l=4, ds=3, dk=6, k=4);
         for(i = [0:n_p])
           translate([4.17+20.32*(7-i), 248, 0])
-            CMCountersunk(l=5, ds=3, dk=6, k=4);
+            CMCountersunk(l=4, ds=3, dk=6, k=4);
       }
 
       // TODO: detachable psu mount
