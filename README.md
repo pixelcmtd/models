@@ -55,8 +55,8 @@ A structure that allows you to mount a 200mm fan to a VESA mount.
 
 ## [KeyboardFeet](KeyboardFeet.scad)
 
-Feet for my keyboard to stand on an HDMI switch and Composite converter in
-addition to my PS4.
+Feet for my keyboard to stand on the desk,
+with enough space to route cables below it.
 
 <img width=200px height=200px src=KeyboardFeet.png />
 
