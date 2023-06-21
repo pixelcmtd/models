@@ -14,50 +14,23 @@ rotate([-90, 0, 0]) {
       rotate([0, 90, 0])
       cylinder(5, d=50);
 
-    translate([40, 5, 70])
-      rotate([90, 0, 0])
-      cylinder(5, d=4);
-    translate([40, 5, 138.5])
-      rotate([90, 0, 0])
-      cylinder(5, d=4);
-    translate([130, 5, 70])
-      rotate([90, 0, 0])
-      cylinder(5, d=4);
-    translate([130, 5, 138.5])
-      rotate([90, 0, 0])
-      cylinder(5, d=4);
-    translate([233.5, 5, 70])
-      rotate([90, 0, 0])
-      cylinder(5, d=4);
-    translate([233.5, 5, 138.5])
-      rotate([90, 0, 0])
-      cylinder(5, d=4);
+    for(x = [40, 130, 233.5])
+      for(z = [70, 138.5])
+        translate([x, 5, z])
+          rotate([90, 0, 0])
+          cylinder(5, d=4);
 
-    translate([130, 10, 195])
-      rotate([0, 0, 90])
-      cylinder(5, d=5);
-    translate([130, 130, 195])
-      rotate([0, 0, 90])
-      cylinder(5, d=5);
-    translate([10, 10, 195])
-      rotate([0, 0, 90])
-      cylinder(5, d=5);
-    translate([10, 130, 195])
-      rotate([0, 0, 90])
-      cylinder(5, d=5);
+    for(x = [10, 130])
+      for(y = [10, 130])
+        translate([x, y, 195])
+          rotate([0, 0, 90])
+          cylinder(5, d=5);
 
-    translate([320, 10, 195])
-      rotate([0, 0, 90])
-      cylinder(5, d=5);
-    translate([320, 130, 195])
-      rotate([0, 0, 90])
-      cylinder(5, d=5);
-    translate([200, 10, 195])
-      rotate([0, 0, 90])
-      cylinder(5, d=5);
-    translate([200, 130, 195])
-      rotate([0, 0, 90])
-      cylinder(5, d=5);
+    for(x = [200, 320])
+      for(y = [10, 130])
+        translate([x, y, 195])
+          rotate([0, 0, 90])
+          cylinder(5, d=5);
 
     translate([260, 70, 195])
       cylinder(5, d=120);
