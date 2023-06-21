@@ -8,12 +8,10 @@ difference() {
   }
   cylinder(50, d=60);
 
-  translate([45, 0, 0])
-    cylinder(8, d=4);
-  translate([-45, 0, 0])
-    cylinder(8, d=4);
-  translate([0, 45, 0])
-    cylinder(8, d=4);
-  translate([0, -45, 0])
-    cylinder(8, d=4);
+  for(x = [-45, 45])
+    translate([x, 0, 0])
+      cylinder(8, d=4);
+  for(y = [-45, 45])
+    translate([0, y, 0])
+      cylinder(8, d=4);
 }
