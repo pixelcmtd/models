@@ -2,15 +2,11 @@
 /// when they don't fit in your printer.
 
 difference() {
-    union() {
-        linear_extrude(4)
-            circle(32.5);
-        linear_extrude(65)
-            circle(25);
-    }
-    linear_extrude(65)
-        circle(3);
-    translate([0, 0, 4])
-        linear_extrude(57)
-        circle(22);
+  union() {
+    cylinder(4, r=32.5);
+    cylinder(65, r=25);
+  }
+  cylinder(65, r=3);
+  translate([0, 0, 4])
+    cylinder(57, r=22);
 }
