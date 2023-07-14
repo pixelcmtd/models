@@ -1,6 +1,11 @@
 # models
 
-Some models for 3D printing that we have made at chrissx Media.
+Models for CNC (3DP, Laser, Milling). Some are official chrissx Media projects,
+some are just my personal goofing around.
+
+BoMs use the
+[CMSFC](https://gist.github.com/pixelcmtd/e563df3891d0242b0eebf33e270d5591)
+abbreviations.
 
 ## [BabasRing](BabasRing.scad)
 
@@ -158,10 +163,12 @@ assuming you have a metal bracket to hold it.
 
 A PC test bench that supports ATX, Micro-ATX, DTX, Mini-ITX and probably many more.
 
-Extra parts needed:
-- M3 Inserts (l < 7.5)
-- M3 Spacers (l ≥ 90)
-- M3 Countersunk Screws (8 < l < 12 should be a good idea, depending on your spacers)
+### Ingredients
+
+- IM3×<7.5
+- AM3×≥90 Spacers
+- CM3 (8 < l < 12 should be a good idea, depending on your spacers)
+- SM3×≤10 (depending on your mainboard and pcie slot thicknesses)
 
 <img width=200px height=200px src=testbench.png />
 

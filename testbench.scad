@@ -1,10 +1,11 @@
 /// A PC test bench that supports ATX, Micro-ATX, DTX, Mini-ITX and probably many more.
 ///
-/// Extra parts needed:
-/// - M3 Inserts (l < 7.5)
-/// - M3 Spacers (l ≥ 90)
-/// - M3 Countersunk Screws (8 < l < 12 should be a good idea, depending on your spacers)
-/// - M3 Screws (l ≤ 10, depending on your mainboard and pcie slot thicknesses)
+/// ### Ingredients
+///
+/// - IM3×<7.5
+/// - AM3×≥90 Spacers
+/// - CM3 (8 < l < 12 should be a good idea, depending on your spacers)
+/// - SM3×≤10 (depending on your mainboard and pcie slot thicknesses)
 use <CMSL.scad>;
 $fn = 10;
 
