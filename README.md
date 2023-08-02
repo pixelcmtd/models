@@ -172,6 +172,18 @@ A PC test bench that supports ATX, Micro-ATX, DTX, Mini-ITX and probably many mo
 
 <img width=200px height=200px src=testbench.png />
 
+## [variachandle](variachandle.scad)
+
+I felt my variac could use some handles, so I printed some.
+
+### Ingredients
+
+- [a variac](https://eur.vevor.com/variable-transformer-c_10755/variable-transformer-2000va-power-supply-voltage-transformer-converter-220v-p_010539394485) (buy it from somewhere else for cheaper)
+- 4×SM4×16
+- 4×WM4
+
+<img width=200px height=200px src=variachandle.png />
+
 ## [weldingstation](weldingstation.scad)
 
 A welding station consisting of four KYOCERA AVX SCCY68B407SSB capacitors
