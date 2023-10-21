@@ -154,8 +154,8 @@ a shitty duct to attach a hose to a window
 
 ## [solderingstation](solderingstation.scad)
 
-A way of mounting a soldering iron,
-assuming you have a metal bracket to hold it.
+A way of mounting soldering irons,
+assuming you have metal brackets.
 
 <img width=200px height=200px src=solderingstation.png />
 
