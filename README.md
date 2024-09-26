@@ -172,6 +172,15 @@ A PC test bench that supports ATX, Micro-ATX, DTX, Mini-ITX and probably many mo
 
 <img width=200px height=200px src=testbench.png />
 
+## [usbcharger](usbcharger.scad)
+
+### Ingredients
+
+- n×charging module (2×[USB-PD module](https://aliexpress.com/item/4000186077208.html) in the given version)
+- m×wood screw M3×h (2~6×wood screw M3×>20)
+
+<img width=200px height=200px src=usbcharger.png />
+
 ## [variachandle](variachandle.scad)
 
 I felt my variac could use some handles, so I printed some.
