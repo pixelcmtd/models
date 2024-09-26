@@ -1,6 +1,6 @@
 /*
  * CMSL - The chrissx Media SCAD library
- * Copyright 2021-2023 chrissx Media, P. C. Häußler
+ * Copyright 2021-2024 chrissx Media, Pixel Häußler
  * For licensing information please refer to the 2nd version of the GNU General
  * Public License, as found in the repository you should have obtained this file
  * from, at <https://github.com/pixelcmtd/models/tree/master/LICENSE>.
@@ -41,6 +41,22 @@ module CMBox(size=[50, 50, 37.5], wall=1, fronttext=[],
   }
 }
 
+module CMRoundSquare(size=1, r=0.25, center=false) {
+  size = is_num(size) ? [size, size] : size;
+  center = is_bool(center) ? [center, center] : center;
+  translate([center.x ? -size.x/2 : 0, center.y ? -size.y/2 : 0])
+    if(r == 0)
+      square(size);
+    else
+      hull()
+      for(p = [[r, r],
+          [r, size.y - r],
+          [size.x - r, r],
+          [size.x - r, size.y - r]])
+        translate(p)
+            circle(r=r);
+}
+
 module CMRoundCube(size=1, r=0.25, 3d=true, center=false) {
   size = is_num(size) ? [size, size, size] : size;
   center = is_bool(center) ? [center, center, center] : center;
@@ -70,6 +86,27 @@ module CMRoundCube(size=1, r=0.25, 3d=true, center=false) {
               circle(r=r);
 }
 
+/// NOTE: this api is not final
+module CMRoundBox(size=10, wall=1, r=1, 3d=false, fronttext=[],
+    textsize=1.5, font="Liberation Mono", textdepth=1.5) {
+  size = is_num(size) ? [size, size, size] : size;
+  wall = is_num(wall) ? [wall, wall, wall] : wall;
+  // TODO: inverted text if depth < 0
+  union() {
+    difference() {
+      CMRoundCube([size.x, size.y, size.z], r=r, 3d=3d);
+      translate([wall.x, wall.y, wall.z])
+        CMRoundCube([size.x-wall.x*2, size.y-wall.y*2, size.z-wall.z], r=r, 3d=3d);
+    }
+    translate([wall.x, 0, size.z-wall.z])
+      rotate([90, 0, 0])
+      linear_extrude(textdepth)
+      CMMultiLineText(fronttext, size=textsize, vspace=textsize, font=font);
+  }
+}
+
+/// NOTE: parameters names and order will change
+// TODO: figure everything out (diameter support, order, ...)
 module CMRing(inner=0.5, outer=1, height=1) {
   linear_extrude(height) {
     difference() {
