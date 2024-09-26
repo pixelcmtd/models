@@ -146,6 +146,12 @@ a backplate for older intel sockets (75²)
 
 <img width=200px height=200px src=oldintelbackplate.png />
 
+## [scopeshelf](scopeshelf.scad)
+
+
+
+<img width=200px height=200px src=scopeshelf.png />
+
 ## [shitduct](shitduct.scad)
 
 a shitty duct to attach a hose to a window
