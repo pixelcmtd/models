@@ -130,16 +130,16 @@ module CMGear(inner=0.5, outer=1, height=1, n=5, thickness=0.5, width=0.5) {
 }
 
 // TODO: angle halfes (or i think we can use children indexes)
-module CMAngleConnector(w=5, h1=10, h2=10, thickness=3, angle=90) {
+module CMAngleConnector(w=5, h1=10, h2=10, thickness=3, angle=-90) {
   union() {
-    translate([0, 0, -w])
-      linear_extrude(thickness)
+    linear_extrude(thickness)
       difference() {
         square([h1, w]);
         translate([h1, w/2])
           children();
       }
-    rotate([0, angle, 0])
+    translate([thickness, 0, 0])
+      rotate([0, angle, 0])
       linear_extrude(thickness)
       difference() {
         square([h2, w]);
