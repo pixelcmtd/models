@@ -87,6 +87,7 @@ module CMRoundCube(size=1, r=0.25, 3d=true, center=false) {
 }
 
 /// NOTE: this api is not final
+/// size: outer (inner + wall*2)
 module CMRoundBox(size=10, wall=1, r=1, 3d=false, fronttext=[],
     textsize=1.5, font="Liberation Mono", textdepth=1.5) {
   size = is_num(size) ? [size, size, size] : size;
@@ -160,6 +161,7 @@ module CMAngleConnector(w=5, h1=10, h2=10, thickness=3, angle=-90) {
 module CMCountersunk(l=10, ds=4, dk, k) {
   dk = dk == undef ? ds * 2.25 : dk;
   k = k == undef ? ds * 0.75 : k;
+  // TODO: give an error if k > l
   union() {
     cylinder(l, d=ds);
     cylinder(k, d1=dk, d2=ds);
@@ -194,3 +196,14 @@ module CMFrame(points, r, h, w, 3d) {
         translate([p1.x-w/2, p1.y-w/2, 0])
           CMRoundCube([p2.x-p1.x+w, w, h], r=r, 3d=3d);
 }
+
+module CMFanHoles120(center=false) {
+  a = center ? [7.5-60, 120-7.5] : [7.5, 112.5];
+  for(x = a)
+    for(y = a)
+      translate([x, y, 0])
+        children();
+}
+
+// TODO: d3-9 48.5x31.8x13.7x34.6x3.2 (https://ae01.alicdn.com/kf/S815e2331d3f14710a288fc8f270753a5i.jpg)
+// TODO: d2-6 33.5x31.8x13.7x19.6x3.2 (https://ae01.alicdn.com/kf/S74f2bca561e54287a87dcc55e5160c7ex.jpg)
