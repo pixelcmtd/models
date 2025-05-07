@@ -7,19 +7,19 @@ DXF = $(SCAD:.scad=.dxf)
 all: $(CSG) $(STL) $(PNG) $(DXF) README.md
 
 %.stl: %.csg
-	OPENSCADPATH=lib openscad $< -o $@
+	OPENSCADPATH=lib openscad $< --backend=manifold -o $@
 
 %.csg: %.scad
-	OPENSCADPATH=lib openscad $< -o $@
+	OPENSCADPATH=lib openscad $< --backend=manifold -o $@
 
 %.png: %.csg
-	OPENSCADPATH=lib openscad $< --render --imgsize 1024,1024 --colorscheme BeforeDawn -o $@
+	OPENSCADPATH=lib openscad $< --backend=manifold --render --imgsize 1024,1024 --colorscheme BeforeDawn -o $@
 
 %.2d.scad: %.stl
 	echo 'projection() import("$<");' > $@
 
 %.dxf: %.2d.scad
-	OPENSCADPATH=lib openscad $< -o $@
+	OPENSCADPATH=lib openscad $< --backend=manifold -o $@
 
 clean:
 	rm -f $(STL) $(CSG) $(PNG) *.gx *.gcode *.cnc README.md
