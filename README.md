@@ -20,6 +20,22 @@ A gear that babaEX needed once.
 
 <img width=200px height=200px src=BabasRing.png />
 
+## [batterytester](batterytester.scad)
+
+BoM:
+- Battery thingy: https://ae01.alicdn.com/kf/Sce4b29949b7449bdba2574988b619db5S.jpg
+- HS100: https://media.digikey.com/pdf/Data%20Sheets/Ohmite%20PDFs/HS_Resistors.pdf
+- 2x 12×20 switch: https://ae01.alicdn.com/kf/Sc5bd4ec7b2de49d798a1bf6e7486f891l.jpg
+or Earu MTS-103
+- any combination of M4 screws and spacers (4x CM4×40; 2x CM4×40, 2x SM4×8; etc)
+- 1x CM3×8 (battery thingy)
+- 2x SM3×~20 (Vin/GND)
+- 2x NM3 (Vin/GND)
+
+HS100 is overkill, but easier to mount rn.
+
+<img width=200px height=200px src=batterytester.png />
+
 ## [CMBox120.5](CMBox120.5.scad)
 
 A 120²x70 CMBox with a wall-thickness of 5.
