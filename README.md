@@ -36,6 +36,13 @@ HS100 is overkill, but easier to mount rn.
 
 <img width=200px height=200px src=batterytester.png />
 
+## [boost-case](boost-case.scad)
+
+Case for [XL6019](https://de.aliexpress.com/item/4000197777372.html) boost
+converter
+
+<img width=200px height=200px src=boost-case.png />
+
 ## [CMBox120.5](CMBox120.5.scad)
 
 A 120²x70 CMBox with a wall-thickness of 5.
