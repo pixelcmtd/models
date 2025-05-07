@@ -7,6 +7,13 @@ BoMs use the
 [CMSFC](https://gist.github.com/pixelcmtd/e563df3891d0242b0eebf33e270d5591)
 abbreviations.
 
+## [audiojackmount](audiojackmount.scad)
+
+A mount for a ¼" audio jack, held in place by something like a headphone
+holder. Currently used below my booth.
+
+<img width=200px height=200px src=audiojackmount.png />
+
 ## [BabasRing](BabasRing.scad)
 
 A gear that babaEX needed once.
