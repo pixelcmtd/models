@@ -81,6 +81,12 @@ A structure that allows you to mount a 200mm fan to a VESA mount.
 
 <img width=200px height=200px src=FanMount.png />
 
+## [fusepanel](fusepanel.scad)
+
+A simple box for mounting DIN rail circuit breakers.
+
+<img width=200px height=200px src=fusepanel.png />
+
 ## [KeyboardFeet](KeyboardFeet.scad)
 
 Feet for my keyboard to stand on the desk,
