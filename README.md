@@ -207,6 +207,14 @@ assuming you have metal brackets.
 
 <img width=200px height=200px src=solderingstation.png />
 
+## [SpoolHolder](SpoolHolder.scad)
+
+A spool holder (for filament spools that don't have filament on them).
+
+Designed by babaEX.
+
+<img width=200px height=200px src=SpoolHolder.png />
+
 ## [testbench](testbench.scad)
 
 A PC test bench that supports ATX, Micro-ATX, DTX, Mini-ITX and probably many more.
