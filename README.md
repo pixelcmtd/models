@@ -88,6 +88,12 @@ with enough space to route cables below it.
 
 <img width=200px height=200px src=KeyboardFeet.png />
 
+## [labpsu2](labpsu2.scad)
+
+very rough prototype of a case for my second lab psu
+
+<img width=200px height=200px src=labpsu2.png />
+
 ## [MacBookCooler](MacBookCooler.scad)
 
 Successor to MacBookMount
