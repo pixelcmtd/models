@@ -182,6 +182,12 @@ a microscope for your phone
 
 <img width=200px height=200px src=microscope.png />
 
+## [nd](nd.scad)
+
+Nail lamp/dryer using a custom PCB that will be published at some point
+
+<img width=200px height=200px src=nd.png />
+
 ## [oldintelbackplate](oldintelbackplate.scad)
 
 a backplate for older intel sockets (75²)
