@@ -114,12 +114,6 @@ Externally water cools your MacBook (if you made it uncompliant)
 
 <img width=200px height=200px src=MacBookCooler.png />
 
-## [MonsterCup](MonsterCup.scad)
-
-A cup that can fit a can of Monster or be used otherwise.
-
-<img width=200px height=200px src=MonsterCup.png />
-
 ## [PCFoot](PCFoot.scad)
 
 feet for my pc, LEL
@@ -138,36 +132,6 @@ A mounting bracket for everything you can think of,
 but mainly an Anker PowerPort.
 
 <img width=200px height=200px src=UsbHolder.png />
-
-## [WaterCup](WaterCup.scad)
-
-
-
-<img width=200px height=200px src=WaterCup.png />
-
-## [WaterCupTop](WaterCupTop.scad)
-
-
-
-<img width=200px height=200px src=WaterCupTop.png />
-
-## [WristRamp](WristRamp.scad)
-
-
-
-<img width=200px height=200px src=WristRamp.png />
-
-## [WristStick](WristStick.scad)
-
-
-
-<img width=200px height=200px src=WristStick.png />
-
-## [clamp](clamp.scad)
-
-A very simple clamp that was used to attach a desk pad to a desk once.
-
-<img width=200px height=200px src=clamp.png />
 
 ## [dc-power-strip](dc-power-strip.scad)
 
