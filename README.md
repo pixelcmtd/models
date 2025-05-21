@@ -192,6 +192,12 @@ Designed by babaEX.
 
 <img width=200px height=200px src=SpoolHolder.png />
 
+## [spoolholder2](spoolholder2.scad)
+
+holds smol spools (designed for electrical tape)
+
+<img width=200px height=200px src=spoolholder2.png />
+
 ## [testbench](testbench.scad)
 
 A PC test bench that supports ATX, Micro-ATX, DTX, Mini-ITX and probably many more.
