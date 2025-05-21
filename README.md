@@ -83,6 +83,13 @@ Now very FlashForge Finder (v1) specific.
 
 <img width=200px height=200px src=CMMountedFilamentPipe.png />
 
+## [dc-power-strip](dc-power-strip.scad)
+
+A power strip consisting of three Neutrik powerCON TRUE1 (TOP) connectors
+and a (currently unused) switch.
+
+<img width=200px height=200px src=dc-power-strip.png />
+
 ## [fan-grill](fan-grill.scad)
 
 a mediocre 120mm fan grill
@@ -138,32 +145,6 @@ Successor to MacBookMount
 Externally water cools your MacBook (if you made it uncompliant)
 
 <img width=200px height=200px src=MacBookCooler.png />
-
-## [PCFoot](PCFoot.scad)
-
-feet for my pc, LEL
-
-<img width=200px height=200px src=PCFoot.png />
-
-## [SimpleMonsterCooler](SimpleMonsterCooler.scad)
-
-
-
-<img width=200px height=200px src=SimpleMonsterCooler.png />
-
-## [UsbHolder](UsbHolder.scad)
-
-A mounting bracket for everything you can think of,
-but mainly an Anker PowerPort.
-
-<img width=200px height=200px src=UsbHolder.png />
-
-## [dc-power-strip](dc-power-strip.scad)
-
-A power strip consisting of three Neutrik powerCON TRUE1 (TOP) connectors
-and a (currently unused) switch.
-
-<img width=200px height=200px src=dc-power-strip.png />
 
 ## [microscope](microscope.scad)
 
@@ -254,6 +235,13 @@ I felt my variac could use some handles, so I printed some.
 
 A welding station consisting of four KYOCERA AVX SCCY68B407SSB capacitors
 in series and two 0AWG with M8 end...shoe...things
+
 This is probably the worst best way of welding.
 
 <img width=200px height=200px src=weldingstation.png />
+
+## [Zs1](Zs1.scad)
+
+a handheld Zs1/7/8 signal
+
+<img width=200px height=200px src=Zs1.png />
