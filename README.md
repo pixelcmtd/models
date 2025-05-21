@@ -20,6 +20,13 @@ A gear that babaEX needed once.
 
 <img width=200px height=200px src=BabasRing.png />
 
+## [badoven](badoven.scad)
+
+a kind of oven/furnace that can be built very easily and
+is only designed for temps up to about 100C (depending on material choice)
+
+<img width=200px height=200px src=badoven.png />
+
 ## [batterytester](batterytester.scad)
 
 BoM:
