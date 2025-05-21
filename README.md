@@ -95,6 +95,12 @@ A structure that allows you to mount a 200mm fan to a VESA mount.
 
 <img width=200px height=200px src=FanMount.png />
 
+## [fridge](fridge.scad)
+
+A TEC-powered mini fridge
+
+<img width=200px height=200px src=fridge.png />
+
 ## [fusepanel](fusepanel.scad)
 
 A simple box for mounting DIN rail circuit breakers.
