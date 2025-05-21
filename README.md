@@ -101,6 +101,18 @@ A TEC-powered mini fridge
 
 <img width=200px height=200px src=fridge.png />
 
+## [fume-extractor](fume-extractor.scad)
+
+A fume extractor for soldering etc.
+
+### Ingredients
+
+- 4× 120mm fans
+- 4× 120×120×10 carbon filters
+- 16× IM3S
+
+<img width=200px height=200px src=fume-extractor.png />
+
 ## [fusepanel](fusepanel.scad)
 
 A simple box for mounting DIN rail circuit breakers.
