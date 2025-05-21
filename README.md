@@ -83,11 +83,11 @@ Now very FlashForge Finder (v1) specific.
 
 <img width=200px height=200px src=CMMountedFilamentPipe.png />
 
-## [FBaba](FBaba.scad)
+## [fan-grill](fan-grill.scad)
 
-F
+a mediocre 120mm fan grill
 
-<img width=200px height=200px src=FBaba.png />
+<img width=200px height=200px src=fan-grill.png />
 
 ## [FanMount](FanMount.scad)
 
